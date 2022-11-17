@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <title>Netbook</title>
+
+</head>
+
+<body>
+    <section id="header" class="navbar border-b bg-white lg:bg-transparent w-full z-50 duration-500 fixed">
+        <div class="container mx-auto lg:flex gap-[72px] items-center pt-[22px] pb-[16px]">
+
+            <!-- logo -->
+            <div class="flex items-center justify-between px-3 lg:px-0 pb-3 lg:pb-0">
+                <div class="img-box">
+                    <img src="./assets/img/logo.png" alt="" />
+                </div>
+
+                <!--btn toogle menu -->
+                <button onclick="toggle()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="lg:hidden w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="menu-nav"
+                class="lg:-translate-x-0 lg:flex items-center justify-between w-full -translate-x-full transform transition-all ease-in duration-300 absolute lg:static bg-white lg:bg-transparent">
+                <!-- start nav link -->
+                <ul class="font-inter transition-all duration-200 mt-3 px-3 lg:flex lg:gap-8 lg:mt-0 lg:px-0">
+                    <li class="py-2 lg:py-0 px-3 lg:px-0">
+                        <a href="" class="hover:font-medium">Home</a>
+                    </li>
+                    <li class="py-2 lg:py-0 px-3 lg:px-0">
+                        <a href="" class="flex items-center gap-1 hover:font-medium">
+                            <p>Comunity</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-3 h-3 self-center">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="py-2 lg:py-0 px-3 lg:px-0">
+                        <a href="" class="hover:font-medium">Blog</a>
+                    </li>
+                    <li class="py-2 lg:py-0 px-3 lg:px-0">
+                        <a href="" class="hover:font-medium">Event</a>
+                    </li>
+                </ul>
+                <!-- end nav link -->
+
+                <!-- start action nav -->
+                <div class="flex flex-wrap justify-center items-center gap-4 lg:gap-[42px] pb-3 lg:pb-0">
+                    <div class="serch-box flex items-center gap-2 border-b rounded-lg px-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                        <input
+                            class="w-full lg:w-[105px] focus:outline-none lg:focus:w-[200px] p-2 duration-300 bg-transparent text-gray-500"
+                            type="text" placeholder="Serch Here..." />
+                    </div>
+                    <button type="button"
+                        class="text-white px-[44px] py-3 bg-blue-500 rounded-lg font-inter font-semibold hover:bg-blue-600 hover:shadow-lg duration-200 focus:ring-2 focus:ring-blue-300">
+                        Log In
+                    </button>
+                </div>
+                <!-- end action nav -->
+            </div>
+        </div>
+    </section>
+
+    <section id="hero" class="bg-gradient-to-tl to-[#FFFFFF 78.85%] from-[#D4E7FE] pt-24 lg:pt-[82px] pb-20">
+        <div class="container mx-auto gap-5 lg:gap-0 flex flex-wrap-reverse lg:items-center px-5 lg:px-0">
+            <div id="hero-box" class="w-full lg:w-1/2">
+                <div class="flex justify-center lg:block">
+                    <div
+                        class="inline-block py-3 px-5 lg:py-[12px] lg:px-[30px] bg-sky-100 text-[#217BF4] rounded-lg font-inter mb-5">
+                        Netbook Community
+                    </div>
+                </div>
+                <h1
+                    class="font-inter font-bold text-[56px] text-[#0A093D] leading-[66px] mb-[18px] mx-auto inline-block w-fullt lg:w-[515px] text-center lg:text-start">
+                    Your Solutions For Community!
+                </h1>
+                <p
+                    class="font-inter text-[18px] font-normal text-[#656464] lg:leading-7 inline-block w-full lg:w-[491px] mb-[42px] text-center lg:text-start">
+                    More than 2 billion people in over countries use socibook to stay in
+                    touch with friends & family.
+                </p>
+
+                <!-- hero action -->
+                <div class="flex items-center justify-center lg:justify-start gap-[18px] w-full">
+                    <button
+                        class="py-4 px-5 lg:py-[24px] lg:px-[42px] bg-blue-600 text-[#E5E5E5] rounded-2xl hover:bg-blue-800 duration-200 lg:hover:scale-105 lg:focus:ring-4 focus:ring-blue-400">
+                        About More
+                    </button>
+                    <button
+                        class="py-4 px-5 lg:py-[24px] lg:px-[42px] border-solid border-2 border-blue-400 rounded-xl text-[#217BF4] font-medium leading-[14px] hover:bg-blue-400 hover:text-white duration-200 lg:hover:scale-105 lg:focus:ring-4 focus:ring-blue-300">
+                        Invite friend
+                    </button>
+                </div>
+            </div>
+
+            <!-- hero image -->
+            <figure class="flex justify-center">
+                <img src="./assets/img/Iamge.png" alt="" class="w-[585px]" />
+            </figure>
+        </div>
+    </section>
+
+    <section id="netbokJoin" class="mt-24">
+        <div class="container mx-auto flex flex-wrap-reverse items-center justify-center lg:justify-between columns-2">
+
+            <!-- title -->
+            <div class="font-inter inline-block w-[406px] px-5 lg:px-0">
+                <p class="font-medium text-lg text-[#217BF4] mb-[10px]">
+                    Whats Netbooks?
+                </p>
+                <h1 class="font-bold text-4xl leading-[48px] mb-4">
+                    Why Join to Netbook Social Network?
+                </h1>
+                <p class="font-normal text-base leading-7 text-[#656464] mb-9">
+                    Recent surveys have indicated that small businesses recognise the
+                    need they have to connect with consumer.
+                </p>
+                <ul class="">
+                    <li class="flex items-center gap-4 mb-4">
+                        <img src="./assets/img/list.png" class="ring-4 ring-sky-100 rounded-full" alt="" />
+                        <p class="font-inter font-medium text-[18px] text-[#171648]">
+                            Group
+                        </p>
+                    </li>
+                    <li class="flex items-center gap-4 mb-4">
+                        <img src="./assets/img/list.png" class="ring-4 ring-sky-100 rounded-full" alt="" />
+                        <p class="font-inter font-medium text-[18px] text-[#171648]">
+                            Messages
+                        </p>
+                    </li>
+                    <li class="flex items-center gap-4 mb-4">
+                        <img src="./assets/img/list.png" class="ring-4 ring-sky-100 rounded-full" alt="" />
+                        <p class="font-inter font-medium text-[18px] text-[#171648]">
+                            Share
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- cotent -->
+            <div class="flex flex-wrap items-center justify-center columns-2 py-[34px] gap-7">
+                <figure class="w-[270px] h-[368px] overflow-hidden rounded-2xl">
+                    <img src="./assets/img/Image1.png" alt="" class="hover:scale-110 hover:-z-10 duration-200" />
+                </figure>
+                <div>
+                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl">
+                        <img src="./assets/img/Image2.png" alt="" class="hover:scale-110 hover:-z-10 duration-150" />
+                    </figure>
+                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl">
+                        <img src="./assets/img/Image3.png" alt="" class="hover:scale-110 hover:-z-10 duration-150" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievment" class="mt-[21px]">
+        <div
+            class="container mx-auto flex flex-wrap justify-center items-center px-5 md:px-0 columns-3 gap-[93px] py-[75px]">
+            <div class="flex items-center flex-wrap justify-center columns-2 gap-6">
+                <div id="card" class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-150">
+                    <div class="flex items-center font-inter font-medium text-[20px] leading-5 gap-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-[#217BF4]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+
+                        <p>4.8 Rating</p>
+                    </div>
+                    <div class="flex items-center mt-8 gap-4">
+                        <div class="flex items-center gap">
+                            <div class="w-6 h-6 rounded-full border border-white bg-blue-400"></div>
+                            <div class="w-6 h-6 rounded-full border -ml-2 border-white bg-blue-500"></div>
+                            <div class="w-6 h-6 rounded-full border -ml-2 border-white bg-blue-600"></div>
+                        </div>
+
+                        <p class="font-inter font-semibold text-base leading-[18px] tracking-[-0.02em]">
+                            <span class="text-[#217BF4]">+836k</span>
+                            Members
+                        </p>
+                    </div>
+
+                    <p
+                        class="font-inter font-normal text-base leading-[26px] inline-block w-[274px] mt-10 text-[#8C8C8C]">
+                        More than 2 billion we people over countries use socibooks we to
+                        stay in touch with friends.
+                    </p>
+
+                    <p class="font-inter font-medium text-base leading-4 text-[#217BF4] flex items-center gap-2 mt-10">
+                        Join Our Community
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-[10px] h-[10px]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                    </p>
+                </div>
+                <div id="card" class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-150">
+                    <div class="flex items-center font-inter font-medium text-[20px] leading-5 gap-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-[#217BF4]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                        </svg>
+
+                        <p>Awwwards</p>
+                    </div>
+                    <div class="flex items-center mt-8 gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-6 h-6">
+                            <path
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+
+                        <p class="font-inter font-semibold text-base leading-[18px] tracking-[-0.02em]">
+                            Best of
+                            <span class="text-[#217BF4]">2021</span>
+                            on Github
+                        </p>
+                    </div>
+
+                    <p
+                        class="font-inter font-normal text-base leading-[26px] inline-block w-[274px] mt-10 text-[#8C8C8C]">
+                        More than 2 billion we people over countries use socibooks we to
+                        stay in touch with friends.
+                    </p>
+
+                    <p class="font-inter font-medium text-base leading-4 text-[#217BF4] flex items-center gap-2 mt-10">
+                        Join Our Community
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-[10px] h-[10px]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                    </p>
+                </div>
+            </div>
+
+            <div class="font-inter w-[381px]">
+                <p class="font-medium text-lg leading-[28px] text-[#217BF4]">
+                    Our Achievement
+                </p>
+                <h1 class="font-bold text-4xl leading-[48px] mt-[10px] text-[#0A093D]">
+                    We are Connecting You The Digital Life.
+                </h1>
+                <p class="font-normal text-base leading-[28px] text-[#656464] mt-[18px]">
+                    The scope the Social Media becomes crucial Is helps the business to
+                    directly engage with their needs and wants.
+                </p>
+
+                <button
+                    class="flex items-center gap-5 font-inter font-medium text-sm leading-[14px] tracking-[-0.02em] px-[38px] py-[22px] bg-blue-600 text-white rounded-[14px] mt-[38px] shadow-xl hover:shadow-blue-200 hover:bg-blue-700 hover:-translate-y-1 duration-200">
+                    Discover me
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="fiture" class="bg-gradient-to-t from-white via-blue-100 to-white">
+
+        <div class="container mx-auto pt-[60px] pb-[173px]">
+
+            <!-- title -->
+            <div id="title" class="text-center font-inter">
+                <p class="font-medium text-lg leading-[18px] text-[#217BF4]">
+                    Our Community
+                </p>
+                <h1 class="font-bold text-4xl leading-9 text-[#0A093D] pt-2">
+                    Community Main Feature
+                </h1>
+                <p
+                    class="font-normal text-base leading-7 text-[#656464] inline-block w-full lg:w-[441px] pt-5 px-3 lg:px-0">
+                    The wise man therefore always holds in these matters to this
+                    principle of selection.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-11 mt-16 px-3">
+                <!-- card -->
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-blue-600 to-blue-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path
+                                d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            Members, Friends
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block w-full md:w-[315px]">
+                            Members, Friends Connection ( like followers ), Private Message
+                        </p>
+                    </div>
+                </div>
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-rose-600 to-rose-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path fill-rule="evenodd"
+                                d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z"
+                                clip-rule="evenodd" />
+                            <path
+                                d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            Groups
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block w-full md:w-[315px]">
+                            Your users can create groups to let other users to join and talk
+                        </p>
+                    </div>
+                </div>
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-orange-600 to-orange-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path
+                                d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                            <path
+                                d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            Forum
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block w-full md:w-[315px]">
+                            Forum is ready by BBPress. Your users can make topics and talk.
+                        </p>
+                    </div>
+                </div>
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-blue-600 to-blue-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path
+                                d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            Custome Module
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block md:w-[315px]">
+                            You can create Members, Groups Module. We already created 3
+                            modules. It's by drag & drop live builder.
+                        </p>
+                    </div>
+                </div>
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-rose-600 to-rose-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path fill-rule="evenodd"
+                                d="M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 3A1.5 1.5 0 0012 4.5h4.5A1.5 1.5 0 0015 3h-1.5z"
+                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zM6 12a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V12zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 15a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V15zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 18a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V18zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            List Builder
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block w-full md:w-[315px]">
+                            Members, Groups list can be modified by drag & drop live
+                            builder.
+                        </p>
+                    </div>
+                </div>
+                <div id="card-fiture"
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    <div
+                        class="bg-gradient-to-tl from-yellow-600 to-yellow-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-8 h-8 text-white self-center">
+                            <path fill-rule="evenodd"
+                                d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z"
+                                clip-rule="evenodd" />
+                            <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z" />
+                        </svg>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] text-[#2F2C4A] mb-[14px]">
+                            List Scroll Efects
+                        </h3>
+                        <p class="font-normal text-base leading-[26px] text-[#656464] inline-block w-full md:w-[315px]">
+                            8 different scroll effects are ready. You can always change by
+                            your tastes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="member" class="-mt-[93px]">
+        <div class="container mx-auto pt-[10px] pb-[82px]">
+
+            <!-- title -->
+            <div id="title" class="font-inter text-center">
+                <p class="font-medium text-lg leading-[18px] text-[#217BF4]">
+                    Valuable Team
+                </p>
+                <h1 class="font-bold text-4xl leading-9 mt-[10px] text-[#0A093D]">
+                    Our Active Members
+                </h1>
+                <p class="font-normal text-base leading-7 text-[#656464] mt-[18px] inline-block w-full lg:w-[454px]">
+                    when an unknown printer took a galley of type and meeting fari
+                    scrambled it.
+                </p>
+            </div>
+
+            <!-- button link -->
+            <div class="flex justify-center mt-[39px]  px-3 md:px-0">
+                <div
+                    class="bg-sky-100 p-2 flex flex-wrap items-center justify-center font-inter font-semibold text-base leading-4 rounded-xl gap-1">
+                    <button
+                        class="py-5 px-[50px] hover:bg-[#217BF4] hover:text-white rounded-2xl duration-150 focus:bg-[#217BF4] focus:text-white focus:shadow-md focus:shadow-blue-300">
+                        Newst
+                    </button>
+                    <button
+                        class="py-5 px-[50px] hover:bg-[#217BF4] hover:text-white rounded-2xl duration-150 focus:bg-[#217BF4] focus:text-white focus:shadow-md focus:shadow-blue-300">
+                        Popular
+                    </button>
+                    <button class="py-5 px-[50px] bg-[#217BF4] rounded-2xl shadow-md shadow-blue-300 text-white">
+                        Active
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-11 pb-[84] flex flex-wrap justify-center items-center gap-[30px]">
+                <!-- card member -->
+                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                    <div class="relative">
+                        <img src="./assets/img/members/Image1.png" class="absolute left-[15px] top-3 -z-10"
+                            alt="user image">
+                        <img src="./assets/img/members/avatar.png" alt="avatar user">
+                        <img src="./assets/img/members/Check.png" class="absolute left-[73px] bottom-[1px]"
+                            alt="check image">
+                    </div>
+                    <div class="text-center font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] mt-[29px]">
+                            Kazi Rahman
+                        </h3>
+                        <p class="font-normal text-base leading-4 text-[#656464] mt-[14px]">
+                            @Rahman
+                        </p>
+                    </div>
+                </div>
+
+                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                    <div class="relative">
+                        <img src="./assets/img/members/Image2.png" class="absolute left-[15px] top-3 -z-10"
+                            alt="user image">
+                        <img src="./assets/img/members/avatar.png" alt="avatar user">
+                        <img src="./assets/img/members/Check.png" class="absolute left-[73px] bottom-[1px]"
+                            alt="check image">
+                    </div>
+                    <div class="text-center font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] mt-[29px]">
+                            Kazi Rahman
+                        </h3>
+                        <p class="font-normal text-base leading-4 text-[#656464] mt-[14px]">
+                            @Rahman
+                        </p>
+                    </div>
+                </div>
+
+                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                    <div class="relative w-fit">
+                        <img src="./assets/img/members/Image3.png" class="absolute left-[1px] top-2 -z-10"
+                            alt="user image">
+                        <img src="./assets/img/members/avatar.png" alt="avatar user">
+                        <img src="./assets/img/members/Check.png" class="absolute left-[73px] bottom-[1px]"
+                            alt="check image">
+                    </div>
+                    <div class="text-center font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] mt-[29px]">
+                            Kazi Rahman
+                        </h3>
+                        <p class="font-normal text-base leading-4 text-[#656464] mt-[14px]">
+                            @Rahman
+                        </p>
+                    </div>
+                </div>
+
+                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                    <div class="relative">
+                        <img src="./assets/img/members/Image4.png" class="absolute left-[2px] top-2 -z-10"
+                            alt="user image">
+                        <img src="./assets/img/members/avatar.png" alt="avatar user">
+                        <img src="./assets/img/members/Check.png" class="absolute left-[73px] bottom-[1px]"
+                            alt="check image">
+                    </div>
+                    <div class="text-center font-inter">
+                        <h3 class="font-semibold text-2xl leading-[26px] mt-[29px]">
+                            Kazi Rahman
+                        </h3>
+                        <p class="font-normal text-base leading-4 text-[#656464] mt-[14px]">
+                            @Rahman
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="applicat" class="bg-[#E5F0FD] mt-[46px]">
+        <div class="container mx-auto flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between">
+
+            <!-- text conten -->
+            <div class="font-inter py-[122px] inline-block w-[351px] px-3 md:px-0">
+                <p class="font-medium text-lg leading-[18px] text-[#217BF4]">Get Our Aplication</p>
+                <h3 class="font-bold text-4xl leading-[52px] text-[#0A093D] mt-[10px]">
+                    You Can Easily Find This App…!
+                </h3>
+                <p class="font-normal text-base leading-[26px] text-[#656464] mt-[18px] inline-block w-[341px]">
+                    I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh
+                    loo brilliant.
+                </p>
+                <div class="flex items-center justify-start mt-9">
+                    <img src="./assets/img/btn-appStore.png" alt="">
+                    </figure>
+                    <img src="./assets/img/btn-googleStore.png" alt="">
+                </div>
+            </div>
+
+            <!-- img content -->
+            <img src="./assets/img/mobile.png" class="lg:-mb-11" alt="">
+
+        </div>
+    </section>
+
+    <section id="latest" class="py-24">
+        <div class="container mx-auto py-[34px]">
+
+            <!-- title -->
+            <div id="title" class="text-center font-inter">
+                <p class="text-[#217BF4] font-medium text-base leading-4">Get Our Aplication</p>
+                <h3 class="font-bold text-4xl leading-9 text-[#0A093D] mt-[10px]">Latest News</h3>
+            </div>
+
+            <!-- card content -->
+            <div class="flex flex-wrap items-center justify-center mt-20 gap-[73px]">
+
+                <div id="card-latest">
+                    <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
+                        <img src="./assets/img/latest/Image1.png" class="hover:scale-110 duration-200" alt="">
+                    </figure>
+                    <div class="flex gap-[14px] px-2">
+                        <div class="bg-[#FFAF2E] w-[38px] h-[2px] rounded-xl self-center mb-9"></div>
+                        <div class="font-inter">
+                            <h4 class="mt-[25px] text-[#2F2C4A] font-semibold text-xl leading-8 inline-block w-[273px]">
+                                It Does Not Matter Hows Slowly go as Long
+                            </h4>
+                            <div id="link" class="flex items-center gap-2 mt-6 hover:text-[#217BF4]">
+                                <p class="font-normal text-[16px] leading-4">Continue Reading</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-[10px] h-[10px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card-latest">
+                    <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
+                        <img src="./assets/img/latest/Image2.png" class="hover:scale-110 duration-200" alt="">
+                    </figure>
+                    <div class="flex gap-[14px] px-2">
+                        <div class="bg-[#FFAF2E] w-[38px] h-[2px] rounded-xl self-center mb-9"></div>
+                        <div class="font-inter">
+                            <h4 class="mt-[25px] text-[#2F2C4A] font-semibold text-xl leading-8 inline-block w-[273px]">
+                                Netbook Network Added New Photo Filter
+                            </h4>
+                            <div id="link" class="flex items-center gap-2 mt-6 hover:text-[#217BF4]">
+                                <p class="font-normal text-[16px] leading-4">Continue Reading</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-[10px] h-[10px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card-latest">
+                    <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
+                        <img src="./assets/img/latest/Image3.png" class="hover:scale-110 duration-200" alt="">
+                    </figure>
+                    <div class="flex gap-[14px] px-2">
+                        <div class="bg-[#FFAF2E] w-[38px] h-[2px] rounded-xl self-center mb-9"></div>
+                        <div class="font-inter">
+                            <h4 class="mt-[25px] text-[#2F2C4A] font-semibold text-xl leading-8 inline-block w-[273px]">
+                                We Optimised Netbooks Better Navigation
+                            </h4>
+                            <div id="link" class="flex items-center gap-2 mt-6 hover:text-[#217BF4]">
+                                <p class="font-normal text-[16px] leading-4">Continue Reading</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-[10px] h-[10px]">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer" class="mt-24">
+
+        <div class="bg-[#2B2B39]">
+            <div class="container mx-auto flex flex-wrap px-5 lg:px-0 gap-28 lg:gap-[163px] pt-[74px] pb-[85px]">
+
+                <div class="flex flex-wrap font-inter gap-[98px]">
+                    <div>
+                        <h3 class="text-white font-medium text-xl leading-5">Home</h3>
+                        <ul class="text-[#E7E7E7] font-normal text-base leading-[46px] mt-[22px]">
+                            <li>Home</li>
+                            <li>Community</li>
+                            <li>Events</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium text-xl leading-5">Resources</h3>
+                        <ul class="text-[#E7E7E7] font-normal text-base leading-[46px] mt-[22px]">
+                            <li>Blog</li>
+                            <li>News</li>
+                            <li>Guides</li>
+                            <li>Help Center</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium text-xl leading-5">Community</h3>
+                        <ul class="text-[#E7E7E7] font-normal text-base leading-[46px] mt-[22px]">
+                            <li>News Feed</li>
+                            <li>Profile</li>
+                            <li>Friends</li>
+                            <li>Forums</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-medium text-xl leading-5">Main Links</h3>
+                        <ul class="text-[#E7E7E7] font-normal text-base leading-[46px] mt-[22px]">
+                            <li>Members</li>
+                            <li>Activity</li>
+                            <li>Groups</li>
+                            <li>Private Groups</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="font-inter w-[299px]">
+                    <h3 class="font-medium text-xl leading-8 text-white">
+                        Subscribe Cirkle Newsletter
+                    </h3>
+                    <p class="font-normal text-base leading-7 text-[#E7E7E7] mt-[18px]">
+                        Subscribe to be the first one to know about updates. Enter your email
+                    </p>
+                    <div id="box-serch" class="mt-8 flex w-full font-inter">
+                        <input type="email"
+                            class="bg-transparent text-gray-100 py-[18px] px-6 border border-white border-r-transparent rounded-l-2xl focus:outline-none"
+                            placeholder="Email address">
+                        <button class="py-4 px-6 font-medium leading-4 text-[#2B2B39] bg-white rounded-2xl -ml-5">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-[#20202D] py-[41px] px-[135px]">
+            <div class="container mx-auto flex flex-wrap gap-9 items-center justify-center lg:justify-between">
+                <p class="font-inter text-sm leading-[14px] text-[#F6F6F6] text-center md:text-start">
+                    Besnik Creative Agency.
+                </p>
+                <img src="./assets/img/logo2.png" alt="">
+                <div class="flex items-center gap-2">
+                    <div class="rounded-full p-[7px] bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 512 512">
+                            <path
+                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                        </svg>
+                    </div>
+                    <div class="rounded-full p-[7px] bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </div>
+                    <div class="rounded-full p-[7px] bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 320 512">
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                        </svg>
+                    </div>
+                    <div class="rounded-full p-[7px] bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 448 512">
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script type="text/javascript">
+
+        // buton toggle
+        const nav = document.getElementById('menu-nav');
+
+        function toggle() {
+            nav.classList.toggle("-translate-x-full");
+        }
+
+        // scroll animation
+        window.addEventListener('scroll', navbar);
+
+        function navbar() {
+            var nav = document.querySelectorAll(".navbar");
+
+            for (var i = 0; i < nav.length; i++) {
+                if (window.scrollY > 0) {
+                    nav[i].classList.remove("lg:bg-transparent");
+                } else {
+                    nav[i].classList.add("lg:bg-transparent");
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
