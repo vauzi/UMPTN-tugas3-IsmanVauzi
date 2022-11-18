@@ -23,8 +23,8 @@
 </head>
 
 <body>
-    <section id="header" class="navbar border-b bg-white lg:bg-transparent w-full z-50 duration-500 fixed">
-        <div class="container mx-auto lg:flex gap-[72px] items-center pt-[22px] pb-[16px]">
+    <section id="header" class="navbar border-b bg-white lg:bg-transparent w-full z-50 duration-500 fixed ">
+        <div class="container mx-auto lg:flex gap-[72px] items-center pt-[22px] pb-[16px] overflow-hidden">
 
             <!-- logo -->
             <div class="flex items-center justify-between px-3 lg:px-0 pb-3 lg:pb-0">
@@ -43,9 +43,9 @@
             </div>
 
             <div id="menu-nav"
-                class="lg:-translate-x-0 lg:flex items-center justify-between w-full -translate-x-full transform transition-all ease-in duration-300 absolute lg:static bg-white lg:bg-transparent">
+                class="lg:-translate-x-0 lg:flex items-center justify-between w-full -translate-x-44 opacity-0 transform transition-all ease-in duration-300 absolute lg:static bg-white lg:bg-transparent lg:opacity-100">
                 <!-- start nav link -->
-                <ul class="font-inter transition-all duration-200 mt-3 px-3 lg:flex lg:gap-8 lg:mt-0 lg:px-0">
+                <ul class="font-inter mt-3 px-3 lg:flex lg:gap-8 lg:mt-0 lg:px-0">
                     <li class="py-2 lg:py-0 px-3 lg:px-0">
                         <a href="#hero" class="hover:font-medium">Home</a>
                     </li>
@@ -92,7 +92,7 @@
 
     <section id="hero" class="bg-gradient-to-tl to-[#FFFFFF 78.85%] from-[#D4E7FE] pt-24 lg:pt-[82px] pb-20">
         <div class="container mx-auto gap-5 lg:gap-0 flex flex-wrap-reverse lg:items-center px-5 lg:px-0">
-            <div id="hero-box" class="w-full lg:w-1/2">
+            <div id="hero-box" class="w-full lg:w-1/2 transform transition-all duration-1000">
                 <div class="flex justify-center lg:block">
                     <div
                         class="inline-block py-3 px-5 lg:py-[12px] lg:px-[30px] bg-sky-100 text-[#217BF4] rounded-lg font-inter mb-5">
@@ -133,7 +133,7 @@
         <div class="container mx-auto flex flex-wrap-reverse items-center justify-center lg:justify-between columns-2">
 
             <!-- title -->
-            <div class="font-inter inline-block w-[406px] px-5 lg:px-0">
+            <div class="font-inter inline-block w-[406px] px-5 lg:px-0 slide-right">
                 <p class="font-medium text-lg text-[#217BF4] mb-[10px]">
                     Whats Netbooks?
                 </p>
@@ -168,14 +168,14 @@
 
             <!-- cotent -->
             <div class="flex flex-wrap items-center justify-center columns-2 py-[34px] gap-7">
-                <figure class="w-[270px] h-[368px] overflow-hidden rounded-2xl">
+                <figure class="w-[270px] h-[368px] overflow-hidden rounded-2xl slide-left">
                     <img src="./assets/img/Image1.png" alt="" class="hover:scale-110 hover:-z-10 duration-200" />
                 </figure>
                 <div>
-                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl">
+                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl slide-right">
                         <img src="./assets/img/Image2.png" alt="" class="hover:scale-110 hover:-z-10 duration-150" />
                     </figure>
-                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl">
+                    <figure class="w-[265px] h-[238px] mb-8 overflow-hidden rounded-2xl slide-right">
                         <img src="./assets/img/Image3.png" alt="" class="hover:scale-110 hover:-z-10 duration-150" />
                     </figure>
                 </div>
@@ -186,8 +186,11 @@
     <section id="achievment" class="mt-[21px]">
         <div
             class="container mx-auto flex flex-wrap justify-center items-center px-5 md:px-0 columns-3 gap-[93px] py-[75px]">
+
+
             <div class="flex items-center flex-wrap justify-center columns-2 gap-6">
-                <div id="card" class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-150">
+                <div id="card"
+                    class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-200 slide-right">
                     <div class="flex items-center font-inter font-medium text-[20px] leading-5 gap-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-[#217BF4]">
@@ -225,7 +228,8 @@
                         </svg>
                     </p>
                 </div>
-                <div id="card" class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-150">
+                <div id="card"
+                    class="border rounded-[14px] py-10 pl-11 pr-[10px] hover:shadow-2xl duration-200 slide-top">
                     <div class="flex items-center font-inter font-medium text-[20px] leading-5 gap-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-[#217BF4]">
@@ -265,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="font-inter w-[381px]">
+            <div class="font-inter w-[381px] slide-left">
                 <p class="font-medium text-lg leading-[28px] text-[#217BF4]">
                     Our Achievement
                 </p>
@@ -294,7 +298,7 @@
         <div class="container mx-auto pt-[60px] pb-[173px]">
 
             <!-- title -->
-            <div id="title" class="text-center font-inter">
+            <div id="title" class="text-center font-inter slide-top">
                 <p class="font-medium text-lg leading-[18px] text-[#217BF4]">
                     Our Community
                 </p>
@@ -311,7 +315,7 @@
             <div class="flex flex-wrap justify-center gap-11 mt-16 px-3">
                 <!-- card -->
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-200 slide-left">
                     <div
                         class="bg-gradient-to-tl from-blue-600 to-blue-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -330,7 +334,7 @@
                     </div>
                 </div>
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-200 slide-right">
                     <div
                         class="bg-gradient-to-tl from-rose-600 to-rose-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -352,7 +356,7 @@
                     </div>
                 </div>
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-200 slide-left">
                     <div
                         class="bg-gradient-to-tl from-orange-600 to-orange-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -373,7 +377,7 @@
                     </div>
                 </div>
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-200 slide-right">
                     <div
                         class="bg-gradient-to-tl from-blue-600 to-blue-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -393,7 +397,7 @@
                     </div>
                 </div>
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-200 slide-left">
                     <div
                         class="bg-gradient-to-tl from-rose-600 to-rose-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -417,7 +421,7 @@
                     </div>
                 </div>
                 <div id="card-fiture"
-                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150">
+                    class="flex bg-white pt-10 pl-3 md:pl-10 pb-11 pr-4 md:pr-16 gap-9 rounded-xl shadow hover:shadow-lg duration-150 slide-right">
                     <div
                         class="bg-gradient-to-tl from-yellow-600 to-yellow-400 rounded-3xl px-4 md:px-0 w-[66px] h-[66px] flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -446,7 +450,7 @@
         <div class="container mx-auto pt-[10px] pb-[82px]">
 
             <!-- title -->
-            <div id="title" class="font-inter text-center">
+            <div id="title" class="font-inter text-center slide-bottom">
                 <p class="font-medium text-lg leading-[18px] text-[#217BF4]">
                     Valuable Team
                 </p>
@@ -479,7 +483,8 @@
 
             <div class="pt-11 pb-[84] flex flex-wrap justify-center items-center gap-[30px]">
                 <!-- card member -->
-                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                <div id="card-member"
+                    class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-300 no-slide">
                     <div class="relative">
                         <img src="./assets/img/members/Image1.png" class="absolute left-[15px] top-3 -z-10"
                             alt="user image">
@@ -497,7 +502,8 @@
                     </div>
                 </div>
 
-                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                <div id="card-member"
+                    class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-300 no-slide">
                     <div class="relative">
                         <img src="./assets/img/members/Image2.png" class="absolute left-[15px] top-3 -z-10"
                             alt="user image">
@@ -515,7 +521,8 @@
                     </div>
                 </div>
 
-                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                <div id="card-member"
+                    class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-300 no-slide">
                     <div class="relative w-fit">
                         <img src="./assets/img/members/Image3.png" class="absolute left-[1px] top-2 -z-10"
                             alt="user image">
@@ -533,7 +540,8 @@
                     </div>
                 </div>
 
-                <div id="card-member" class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-150">
+                <div id="card-member"
+                    class="py-[30px] px-[45px] border rounded-lg hover:shadow-lg duration-300 no-slide">
                     <div class="relative">
                         <img src="./assets/img/members/Image4.png" class="absolute left-[2px] top-2 -z-10"
                             alt="user image">
@@ -558,13 +566,14 @@
         <div class="container mx-auto flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between">
 
             <!-- text conten -->
-            <div class="font-inter py-[122px] inline-block w-[351px] px-3 md:px-0">
+            <div class="font-inter py-[122px] inline-block w-[351px] px-3 md:px-0 slide-left">
                 <p class="font-medium text-lg leading-[18px] text-[#217BF4]">Get Our Aplication</p>
                 <h3 class="font-bold text-4xl leading-[52px] text-[#0A093D] mt-[10px]">
                     You Can Easily Find This App…!
                 </h3>
                 <p class="font-normal text-base leading-[26px] text-[#656464] mt-[18px] inline-block w-[341px]">
-                    I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh
+                    I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss
+                    posh
                     loo brilliant.
                 </p>
                 <div class="flex items-center justify-start mt-9">
@@ -575,7 +584,7 @@
             </div>
 
             <!-- img content -->
-            <img src="./assets/img/mobile.png" class="lg:-mb-11" alt="">
+            <img src="./assets/img/mobile.png" class="lg:-mb-11 slide-right" alt="">
 
         </div>
     </section>
@@ -584,15 +593,15 @@
         <div class="container mx-auto py-[34px]">
 
             <!-- title -->
-            <div id="title" class="text-center font-inter">
+            <div id="title" class="text-center font-inter slide-bottom">
                 <p class="text-[#217BF4] font-medium text-base leading-4">Get Our Aplication</p>
                 <h3 class="font-bold text-4xl leading-9 text-[#0A093D] mt-[10px]">Latest News</h3>
             </div>
 
-            <!-- card content -->
             <div class="flex flex-wrap items-center justify-center mt-20 gap-[73px]">
 
-                <div id="card-latest">
+                <!-- card content -->
+                <div id="card-latest" class="no-slide">
                     <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
                         <img src="./assets/img/latest/Image1.png" class="hover:scale-110 duration-200" alt="">
                     </figure>
@@ -614,7 +623,7 @@
                     </div>
                 </div>
 
-                <div id="card-latest">
+                <div id="card-latest" class="no-slide">
                     <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
                         <img src="./assets/img/latest/Image2.png" class="hover:scale-110 duration-200" alt="">
                     </figure>
@@ -636,7 +645,7 @@
                     </div>
                 </div>
 
-                <div id="card-latest">
+                <div id="card-latest" class="no-slide">
                     <figure class="w-[340px] h-[330px] overflow-hidden rounded-2xl">
                         <img src="./assets/img/latest/Image3.png" class="hover:scale-110 duration-200" alt="">
                     </figure>
@@ -717,7 +726,8 @@
                         <input type="email"
                             class="bg-transparent text-gray-100 py-[18px] px-6 border border-white border-r-transparent rounded-l-2xl focus:outline-none"
                             placeholder="Email address">
-                        <button class="py-4 px-6 font-medium leading-4 text-[#2B2B39] bg-white rounded-2xl -ml-5">
+                        <button
+                            class="py-4 px-6 font-medium leading-4 text-[#2B2B39] bg-white rounded-2xl -ml-16 md:-ml-5">
                             Subscribe
                         </button>
                     </div>
@@ -764,7 +774,6 @@
     </section>
 
     <script src="./assets/js/scroll.js"></script>
-
 </body>
 
 </html>
